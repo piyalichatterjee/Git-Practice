@@ -1,0 +1,38 @@
+VCS -> Version Control System
+
+Open Source -> Free -> Written Code Publicly Avalaible
+
+Git bash / Git terminal / Powershell -> cmd
+
+When a folder starts with a dot then the folder is called hidden folder
+
+.git is a hidden folder
+
+When .git folder is not present in the folder then the git is disabled in the folder
+
+When you enter git init command then .git folder will be created
+
+Git has three Stages : 
+Untracked/Unstage -> Tracked/Stage -> Commit
+
+// Git Command
+
+git status -> Check for status
+
+git init -> For enable the git
+
+git add <file/folder name> -> Add to the staging area
+
+git add . -> Add all file and folder to the staging area
+
+git commit -m "" -> This command will commit the staging file
+
+git log -> Shows the commit
+
+git log --pretty=oneline ->  Print commit oneline
+
+rm -rf .git -> Delete the hidden folder .git or git disabled from the folder
+
+git rm --cached <file/folder name> -> Unstage a file or folder
+
+git reset -> Unstage all the file or folder

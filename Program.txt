@@ -1,0 +1,6 @@
+Task for next week
+-> Finish Bootstrap
+-> Javascript playlist rewatch yellow dom (38-64)
+-> Javascript playlist watch harry (23-36)
+-> Finish pending css topics like transition, animation, media queries, transform 
+-> I will give javascript dom program every day
