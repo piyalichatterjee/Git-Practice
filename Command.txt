@@ -36,3 +36,15 @@ rm -rf .git -> Delete the hidden folder .git or git disabled from the folder
 git rm --cached <file/folder name> -> Unstage a file or folder
 
 git reset -> Unstage all the file or folder
+
+git branch -> Show the branch
+
+git clone <Link> -> It is used to download github file to local machine
+
+git remote add origin <Link> -> Git will know where to send the file
+
+git remote -v -> Check if the link is added
+
+git branch -M <branch name> -> Rename the branch name
+
+git push -u origin <branch name>
