@@ -54,3 +54,5 @@ git push -> Push the file in github to default
 git diff -> Compares between staging area and unstage area
 
 git diff --cached -> Compares between staging area and last commit
+
+git diff <commit id> <commit id> -> Compares between two commits
