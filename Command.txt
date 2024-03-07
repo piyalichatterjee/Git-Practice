@@ -50,3 +50,7 @@ git branch -M <branch name> -> Rename the branch name
 git push -u origin <branch name> -> Mention the branch and save for upcoming commits
 
 git push -> Push the file in github to default
+
+git diff -> Compares between staging area and unstage area
+
+git diff --cached -> Compares between staging area and last commit
