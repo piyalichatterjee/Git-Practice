@@ -58,3 +58,9 @@ git diff --cached -> Compares between staging area and last commit
 git diff <commit id> <commit id> -> Compares between two commits
 
 .gitignore -> If we mentions any file or folder name in the .gitignore then the file or folder will be ignored by git
+
+git pull -> Download the difference between local git and github
+
+git checkout -b <branch name> -> Create a branch and switch to the branch
+
+git checkout <branch name> -> Switch the branch
