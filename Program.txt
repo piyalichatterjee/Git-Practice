@@ -4,3 +4,16 @@ Task for next week
 -> Javascript playlist watch harry (23-36)
 -> Finish pending css topics like transition, animation, media queries, transform 
 -> I will give javascript dom program every day
+
+
+
+
+1.// How do you change the text content of an HTML element using JavaScript? 
+
+2.// How can you change the style of an HTML element using JavaScript?
+
+3. Explain how to add a new HTML element dynamically using JavaScript.
+
+4. What is the method to remove an HTML element from the DOM using JavaScript?
+
+5. How do you add an event listener to an HTML element using JavaScript for handling user interactions?
