@@ -2,38 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+   </style>
 </head>
 
 <body>
-   <div id="text" style="color: rgb(52, 8, 214);">
-      <h1>This is a home page</h1>
-   </div>
-   <!-- <div id="text">
+   <!-- <div id="text" style="color: rgb(52, 8, 214);">
       <h1>This is a home page</h1>
    </div> -->
+   <div id="text">
+      <h1>This is a home page</h1>
+      <h1>Hello</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil id vero iure neque aliquam fuga commodi provident excepturi a sed minus totam exercitationem omnis, assumenda mollitia numquam quaerat eum quidem.</p>
+   </div>
 </body>
 <script>
- 1.   // let textElement=document.getElementById("text")
-    // console.log(textElement)
-    // textElement.innerHTML="<h1>This is a heading</h1>"
-    // textElement.firstElementChild.innerText="This is a heading 1"
-    // textElement.textContent="This is a first page"
-    // textElement.firstElementChild.firstChild.replaceWith("test")
-    // textElement.firstElementChild.firstChild.nodeValue = "test"
+   1.   // let textElement=document.getElementById("text")
+   // console.log(textElement)
+   // textElement.innerHTML="<h1>This is a heading</h1>"
+   // textElement.firstElementChild.innerText="This is a heading 1"
+   // textElement.textContent="This is a first page"
+   // textElement.firstElementChild.firstChild.replaceWith("test")
+   // textElement.firstElementChild.firstChild.nodeValue = "test"
 
 
-   let textElement=document.getElementById("text")
-   console.log(textElement)
+   2.  // let textElement=document.getElementById("text")
+   // console.log(textElement)
    // textElement.style.cssText +="background-color:yellow;"
    // textElement.firstElementChild.innerText += " hello"
    // console.log(textElement.style.color)
    // textElement.setAttribute("style","color:green;background-color:red;")
    // textElement.style.color="green"
    // textElement.style.backgroundColor="yellow"
-</script>
+
+  3. // let textElement = document.getElementById("text")
+   // console.log(text)
+   // let pElement = document.createElement("p")
+   // let pText = document.createTextNode("This is a Paragraph")
+   // pElement.appendChild(pText)
+   // textElement.appendChild(pElement)
+
+let textElement=document.getElementById("text")
+let removeElement=textElement.firstElementChild.nextElementSibling
+textElement.removeChild(removeElement)
+
+
+
+
+   </script>
 </html>

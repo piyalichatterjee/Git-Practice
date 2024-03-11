@@ -12,7 +12,7 @@ Task for next week
 
 2.// How can you change the style of an HTML element using JavaScript?
 
-3. Explain how to add a new HTML element dynamically using JavaScript.
+3.// Explain how to add a new HTML element dynamically using JavaScript.
 
 4. What is the method to remove an HTML element from the DOM using JavaScript?
 
