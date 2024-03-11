@@ -64,3 +64,5 @@ git pull -> Download the difference between local git and github
 git checkout -b <branch name> -> Create a branch and switch to the branch
 
 git checkout <branch name> -> Switch the branch
+
+git revert --hard <branch name> -> Revert the branch / Change the head in the branch
