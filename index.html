@@ -13,13 +13,35 @@
    <!-- <div id="text" style="color: rgb(52, 8, 214);">
       <h1>This is a home page</h1>
    </div> -->
-   <div id="text">
+   <!-- <div id="text">
       <h1>This is a home page</h1>
       <h1>Hello</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil id vero iure neque aliquam fuga commodi provident excepturi a sed minus totam exercitationem omnis, assumenda mollitia numquam quaerat eum quidem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil id vero iure neque aliquam fuga commodi
+         provident excepturi a sed minus totam exercitationem omnis, assumenda mollitia numquam quaerat eum quidem.</p>
+      <button id="btn" onclick="clickButton()">Click Us</button>
+      <button id="btn">Click Us</button>
+   </div> -->
+   <div id="box">
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
    </div>
 </body>
 <script>
+   let box = document.getElementById("box")
+   let text = box.firstElementChild
+   window.addEventListener("keyup", (event) => {
+      console.log(event.key)
+      let keyEvent = event.key
+      text.keyEvent
+   })
+
+
+
+
+
+
+
+
+
    1.   // let textElement=document.getElementById("text")
    // console.log(textElement)
    // textElement.innerHTML="<h1>This is a heading</h1>"
@@ -38,19 +60,71 @@
    // textElement.style.color="green"
    // textElement.style.backgroundColor="yellow"
 
-  3. // let textElement = document.getElementById("text")
+   3. // let textElement = document.getElementById("text")
    // console.log(text)
    // let pElement = document.createElement("p")
    // let pText = document.createTextNode("This is a Paragraph")
    // pElement.appendChild(pText)
    // textElement.appendChild(pElement)
 
-let textElement=document.getElementById("text")
-let removeElement=textElement.firstElementChild.nextElementSibling
-textElement.removeChild(removeElement)
+   4.// let textElement=document.getElementById("text")
+   // let removeElement=textElement.firstElementChild.nextElementSibling
+   // textElement.removeChild(removeElement)
+
+
+   5.   // function clickButton(){
+   //    alert("button was a clicked")
+   //    console.log("button was a clicked")
+   // }
+   // let btnId=document.getElementById("btn")
+   // console.log(btnId)
+   // btnId.addEventListener("click",function(){
+   //    alert("button was a clicked")
+   //    console.log("button was a clicked")
+   // })
+
+   //    let btnId=document.getElementById("btn")
+   //    console.log(btnId)
+   // btnId.addEventListener("mouseover",()=>{
+   //           alert("clicked....")
+   // })
+   // let btnId = document.getElementById("btn")
+   // btnId.addEventListener("mouseout", function () {
+
+   //    alert("click out...")
+   //    console.log("Click out...")
+   // })
+   //6. let buttonClick = document.getElementById("btn")
+   // console.log(buttonClick)
+   // let pElement = buttonClick.previousElementSibling
+   // console.log(pElement)
+   // buttonClick.addEventListener("mouseover", () => {
+   //    pElement.style.backgroundColor = "blue"
+   //    pElement.style.color = "white"
+
+   // })
+   // buttonClick.addEventListener("mouseout", () => {
+   //    pElement.style.backgroundColor = "white"
+   //    pElement.style.color = "black"
+   // })
+
+   // let idElement = document.getElementById("text")
+   // let h1Element = idElement.firstElementChild.nextElementSibling
+   // console.log(h1Element)
+   // let pElement = idElement.firstElementChild.nextElementSibling.nextElementSibling
+   // console.log(pElement)
+   // h1Element.addEventListener("mouseover", function () {
+   //    pElement.style.backgroundColor = "yellow"
+   //    pElement.style.color = "red"
+   // })
+
+   // h1Element.addEventListener("mouseout", function () {
+   //    pElement.style.backgroundColor = "white"
+   //    pElement.style.color = "black"
+   // })
 
 
 
+</script>
 
-   </script>
 </html>
