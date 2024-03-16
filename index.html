@@ -26,37 +26,69 @@
    </div> -->
 
    <form action="" method="get" id="box">
-      <input type="text" id="firstname" placeholder="First Name">
-      <input type="text" id="lastname" placeholder="Last Name">
-      <input type="email" id="email" placeholder="Email">
-      <input type="number" id="number" placeholder="Number">
-
+      <input type="text" id="firstname" placeholder="Piyali">
+      <input type="text" id="lastname" placeholder="Chatterjee">
+      <input type="email" id="email" placeholder="abc@gmail.com">
+      <input type="number" id="number" placeholder="12345">
    </form>
 </body>
 <script>
    let box = document.getElementById("box")
+   let checkString = "0123456789"
    console.log(box)
-   let textElement = document.getElementById("firstname")
-   console.log(textElement)
-
+   // let textElement = document.getElementById("firstname")
+   // console.log(textElement)
+   let firstName = box.firstElementChild
+   let lastname = firstName.nextElementSibling
+   console.log(firstName.value)
    // console.log(textElement.value.toUpperCase())   
    // let x=textElement.value.toUpperCase()
    // textElement.value =x 
    // console.log(x)
 
+   const checkName = (e) => {
+      // console.log(e.target.value)
+      let temp = e.target.value // piy123
+      let check = true
+      if (temp[0] === temp[0].toUpperCase()) { // Check for capital
 
-   textElement.addEventListener("change", function () {
+         for (let i = 0; i < temp.length; i++) { // Check for number
 
-      console.log(this.value)
-      console.log(this.value.toUpperCase())
-   })
+            if (checkString.includes(temp[i])) { // Piy123
+               check = false
+               break
+            }
+            
+         }
+         if(check){
+            console.log("Valid")
+         }else {
+            console.log("Invalid")
+         }
+      } else {
+         let temp1 = confirm("You enterd wrong name. Can I correct this?")
+         if (temp1) {
+            e.target.value = `${temp[0].toUpperCase()}${temp.slice(1)}`
+            // e.target.value =  temp[0].toUpperCase()+temp.slice(1)
+         } else {
+            console.log("Please correct the input")
+         }
+      }
+   }
+
+   firstName.addEventListener("change", checkName)
+
+   lastname.addEventListener("blur", checkName)
 
 
 
 
-   // textElement.addEventListener("focus",function(){
-   //   
-   //   textElement.style.background="red"
+
+
+
+   // firstName.addEventListener("blur",function(){
+
+   //   firstName.style.background="red"
    // })
 
 
