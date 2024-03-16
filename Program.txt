@@ -11,7 +11,7 @@ Task for next week
 
 1.// **Mouse Hover Highlighter**: Create a program where hovering over different elements on the page changes their background color.
 
-2. **Key Logger**: Develop a script that logs keypress events and displays them in a textarea element.
+2.// **Key Logger**: Develop a script that logs keypress events and displays them in a textarea element.
 
 3. **Drag and Drop Puzzle**: Implement a drag-and-drop puzzle game where users can rearrange pieces to form an image, with success indicated by a message.
 

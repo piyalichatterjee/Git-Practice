@@ -21,21 +21,43 @@
       <button id="btn" onclick="clickButton()">Click Us</button>
       <button id="btn">Click Us</button>
    </div> -->
-   <div id="box">
+   <!-- <div id="box">
       <textarea name="message" id="message" cols="30" rows="10"></textarea>
-   </div>
+   </div> -->
+
+   <form action="" method="get" id="box">
+      <input type="text" id="firstname" placeholder="First Name">
+      <input type="text" id="lastname" placeholder="Last Name">
+      <input type="email" id="email" placeholder="Email">
+      <input type="number" id="number" placeholder="Number">
+
+   </form>
 </body>
 <script>
    let box = document.getElementById("box")
-   let text = box.firstElementChild
-   window.addEventListener("keyup", (event) => {
-      console.log(event.key)
-      let keyEvent = event.key
-      text.keyEvent
+   console.log(box)
+   let textElement = document.getElementById("firstname")
+   console.log(textElement)
+
+   // console.log(textElement.value.toUpperCase())   
+   // let x=textElement.value.toUpperCase()
+   // textElement.value =x 
+   // console.log(x)
+
+
+   textElement.addEventListener("change", function () {
+
+      console.log(this.value)
+      console.log(this.value.toUpperCase())
    })
 
 
 
+
+   // textElement.addEventListener("focus",function(){
+   //   
+   //   textElement.style.background="red"
+   // })
 
 
 
@@ -108,7 +130,7 @@
    //    pElement.style.color = "black"
    // })
 
-   // let idElement = document.getElementById("text")
+   // 6.let idElement = document.getElementById("text")
    // let h1Element = idElement.firstElementChild.nextElementSibling
    // console.log(h1Element)
    // let pElement = idElement.firstElementChild.nextElementSibling.nextElementSibling
@@ -124,6 +146,18 @@
    // })
 
 
+   // let box = document.getElementById("box")
+   // let text = box.firstElementChild
+   // // console.log(text.value.toUpperCase())
+   // // let a = text.value.toUpperCase()
+   // // text.value = a
+   // // console.log(a)
+   // document.addEventListener("keyup", (event) => {
+   //    console.log(event.key)
+   //    // console.log(event)
+   //    let keyEvent = event.key
+   //    text.value += keyEvent
+   // })
 
 </script>
 
