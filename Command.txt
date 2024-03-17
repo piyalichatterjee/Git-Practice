@@ -76,3 +76,7 @@ git rebase <branch name> -> Merge the branch with orginal commit
 Pull Request -> PR
 
 Merge Conflicts -> 
+
+line 1 added
+
+line 2 added
