@@ -74,3 +74,5 @@ git merge <branch name> -> Merge the branch with single commit
 git rebase <branch name> -> Merge the branch with orginal commit
 
 line 1 added
+
+line 2 added
