@@ -25,60 +25,14 @@
       <textarea name="message" id="message" cols="30" rows="10"></textarea>
    </div> -->
 
-   <form action="" method="get" id="box">
+   <!-- <form action="" method="get" id="box">
       <input type="text" id="firstname" placeholder="Piyali">
       <input type="text" id="lastname" placeholder="Chatterjee">
       <input type="email" id="email" placeholder="abc@gmail.com">
-      <input type="number" id="number" placeholder="12345">
-   </form>
+      <button type="submit">Click</button>
+   </form> -->
 </body>
 <script>
-   let box = document.getElementById("box")
-   let checkString = "0123456789"
-   console.log(box)
-   // let textElement = document.getElementById("firstname")
-   // console.log(textElement)
-   let firstName = box.firstElementChild
-   let lastname = firstName.nextElementSibling
-   console.log(firstName.value)
-   // console.log(textElement.value.toUpperCase())   
-   // let x=textElement.value.toUpperCase()
-   // textElement.value =x 
-   // console.log(x)
-
-   const checkName = (e) => {
-      // console.log(e.target.value)
-      let temp = e.target.value // piy123
-      let check = true
-      if (temp[0] === temp[0].toUpperCase()) { // Check for capital
-
-         for (let i = 0; i < temp.length; i++) { // Check for number
-
-            if (checkString.includes(temp[i])) { // Piy123
-               check = false
-               break
-            }
-            
-         }
-         if(check){
-            console.log("Valid")
-         }else {
-            console.log("Invalid")
-         }
-      } else {
-         let temp1 = confirm("You enterd wrong name. Can I correct this?")
-         if (temp1) {
-            e.target.value = `${temp[0].toUpperCase()}${temp.slice(1)}`
-            // e.target.value =  temp[0].toUpperCase()+temp.slice(1)
-         } else {
-            console.log("Please correct the input")
-         }
-      }
-   }
-
-   firstName.addEventListener("change", checkName)
-
-   lastname.addEventListener("blur", checkName)
 
 
 
@@ -86,10 +40,114 @@
 
 
 
-   // firstName.addEventListener("blur",function(){
 
-   //   firstName.style.background="red"
-   // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // let box = document.getElementById("box")
+   // let checkString = "0123456789"
+   // let symbol = "!@#$%^&*?<>"
+   // console.log(box)
+   // let firstName = box.firstElementChild
+   // let lastname = firstName.nextElementSibling
+   // let email = firstName.nextElementSibling.nextElementSibling
+   // console.log(email)
+   // let format = "@gmail.com"
+
+   // let checkEmail = (a) => {
+   //    console.log(a.target.value)
+   //    let newEmail = a.target.value
+   //    let check = newEmail.includes(format)
+   //    if (newEmail === newEmail.toLowerCase()) {   //lowerCase korche
+   //       if (check) {
+   //          // console.log("yes")
+   //          console.log("valid Email id")
+   //       }
+   //       else {
+   //          console.log("Invalid")
+   //       }
+   //       //  console.log(newEmail.includes(format))
+
+   //    }
+   //    else {
+   //      let text=confirm("plz correct the Email id") 
+   //       // console.log("plz correct the Email id")
+   //    }
+
+   // }
+   // email.addEventListener("change", checkEmail)
+
+
+   // const checkName = (e) => {
+   //    // console.log(e.target.value)
+   //    let temp = e.target.value // piy123
+   //    let check = true
+   //    if (temp[0] === temp[0].toUpperCase()) { // Check for capital
+
+   //       for (let i = 0; i < temp.length; i++) { // Check for number
+
+   //          if (checkString.includes(temp[i])||symbol.includes(temp[i])) { // Piy123
+   //             check = false
+   //             break
+   //          }
+   //          // else if (symbol.includes(temp[i])) {    //Piya&*^
+   //          //    check = false
+   //          //    break
+   //          // }
+
+   //       }
+   //       if (check) {
+   //          console.log("Valid")
+   //       } else {
+   //          console.log("Invalid")
+   //       }
+   //    } else {
+   //       let temp1 = confirm("You enterd wrong name. Can I correct this?")
+   //       if (temp1) {
+   //          e.target.value = `${temp[0].toUpperCase()}${temp.slice(1)}`
+   //          // e.target.value =  temp[0].toUpperCase()+temp.slice(1)
+   //       } else {
+   //          console.log("Please correct the input")
+   //       }
+   //    }
+   // }
+
+   // firstName.addEventListener("change", checkName)
+
+   // lastname.addEventListener("blur", checkName)
+
+
+
+
+
+
+
+
 
 
 
