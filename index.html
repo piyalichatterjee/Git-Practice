@@ -34,39 +34,26 @@
    <button id="btn">Start Now</button>
 </body>
 <script>
-   let button=document.getElementById("btn")
+   let button = document.getElementById("btn")
    console.log(button)
 
-   button.addEventListener("click",function(){
+   let number = 10
+   button.addEventListener("click", function () {
+      console.log("button was clicked")
 
-   setInterval(function(){
-   // for (let i = 10; i >= 0; i--) {
-   //    console.log(i)
-           
-   // }
-      let number=10
-      console.log(number-1)
-         console.log("button was clicked")
-      },5000)
-      // clearInterval()
-    })
+      const stopInterval = setInterval(function () {
+         console.log(number)
+         number--
+         if (number === 0) {
+            console.log("Count Down finished")
+            stop()
+         }
+      }, 1000)
 
-
-function time(){
-
-}
-
-
-
-   // for(let i=10;i>=0;i--){
-   //    console.log(i)
-   // }
-
-   // for(let i=0;i<=10;i++){
-   //    console.log(i)
-   // }
-
-
+      const stop = () => {
+         clearInterval(stopInterval)
+      }
+   })
 
 
 
