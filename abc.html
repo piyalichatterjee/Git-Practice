@@ -4,32 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      #text{
+        width: 250px;
+        height: 200px;
+        margin: 50px 20px;
+        border: 2px solid black;
+        overflow: auto;
+      }
+      #text::-webkit-scrollbar{
+        /* width: 10px; */
+        background-color: aqua;
+      }
+      #text::-webkit-scrollbar-track{
+        border-radius: 10px;
+        background-color: rgb(88, 19, 199);
+      }
+      #text::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: rgb(198, 222, 45);
+      }
+
+    </style>
 </head>
 <body>
-    <form action="">
+    <!-- <form action="">
 
         <input type="text" id="myInput" >
     </form>
+     -->
+     <!-- <a href="https://www.google.com" id="anchor">Click me</a> -->
+<div id="text">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates vitae voluptatem, dignissimos earum architecto ea! Eum, rem molestiae sunt laborum quis ut labore adipisci nam. Ex placeat illo sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni delectus ipsum aliquam ad blanditiis atque iusto eveniet facere. Error aliquam, fuga ad molestiae aut totam nihil tenetur quam eos </p>
+</div>
+
+
+
 </body>
 <script>
-  let text=document.getElementById("myInput")
-  console.log(text)
-  text.addEventListener("focus",myfocusFuntion)
-  text.addEventListener("blur",myBlurFuntion)
-  text.addEventListener("change",function(){
-    console.log(this.value)
-  })
-  text.addEventListener("input",function(){
-    console.log(this.value)
-  })
 
-function myfocusFuntion(){
-    text.style.background="yellow";
-}
-function myBlurFuntion(){
-    text.style.background="white";
+// let link=document.getElementById("anchor")
+// link.addEventListener("click",function(){
+
+// // console.log("link clicked")
+// // e.preventDefault()
+// })
+
+
+//   let text=document.getElementById("myInput")
+//   console.log(text)
+//   text.addEventListener("focus",myfocusFuntion)
+//   text.addEventListener("blur",myBlurFuntion)
+//   text.addEventListener("change",function(){
+//     console.log(this.value)
+//   })
+//   text.addEventListener("input",function(){
+//     console.log(this.value)
+//   })
+
+// function myfocusFuntion(){
+//     text.style.background="yellow";
+// }
+// function myBlurFuntion(){
+//     text.style.background="white";
     
-}
+// }
 
 </script>
 </html>
