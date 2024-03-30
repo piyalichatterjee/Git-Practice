@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word & Character Count</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background-color: rgb(29, 1, 50); */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        width: 80%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #28033b;
+    }
+
+    .box h1 {
+        margin: 20px;
+        color: antiquewhite;
+        text-decoration: underline;
+        font-size: 2.5rem;
+    }
+
+    .box textarea {
+        width: 80%;
+        height: 50%;
+        resize: none;
+        outline: none;
+        font-size: 2rem;
+    }
+
+    .box p {
+        font-size: 2.5rem;
+        color: aliceblue;
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h1>Word & Character Count</h1>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+
+
+
+        <p>Word <span id="word">0</span>
+            Character <span id="character">0</span></p>
+    </div>
+    <script>
+        let text = document.getElementById("text")
+        // console.log(text)
+        // let word=document.getElementById("word")
+        // console.log(word)
+        // let character=document.getElementById("character")
+        // console.log(character)
+
+        text.addEventListener("input", function () {
+            let textValue = text.value
+            // console.log(textValue)
+            textValue = textValue.trim()
+            let count = textValue.length
+            // console.log(count)
+            let character = document.getElementById("character").textContent = count
+            // console.log(character)
+
+
+            // console.log(textValue)
+            let k = textValue.split(" ")
+
+            console.log(k)
+
+            let test = k.filter((k) => {
+                return k != ""
+
+            })
+            // console.log(test)
+            let word = document.getElementById("word").textContent = test.length
+            // console.log(word)
+
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

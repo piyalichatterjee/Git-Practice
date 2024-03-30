@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1.    // callback//
+    // function loadScript(src,callback) {
+    //     let script = document.createElement("script")
+    //     script.src = src
+    //     // console.log(script.src)
+    //     script.onload = function () {
+
+    //         console.log("loaded " + src)
+    //         callback(src)
+    //     }
+    //     document.body.appendChild(script)
+    // }
+    // function hello(src){
+    //    alert("This is my first page "+ src)
+    // }
+    // function hello2(src){
+    //    alert("This is my last page " +src)
+    // }
+    // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", hello2)
+
+    // 2.// Promise  //
+    // let promise=new Promise(function(resolve,reject){
+    //     alert("hi")
+    //     resolve(52)
+    // })
+    // console.log(promise)
+
+
+
+    // console.log("hello")
+    // setTimeout(function(){
+    //     console.log("my name is Piyali")
+    // },2000)
+    // console.log("hello world")
+    //3.Then & catch//
+    // let promise=new Promise(function(resolve,reject){
+    //   console.log("promise is pending")
+    //     // resolve(41)  
+    //    setTimeout(function(){
+    //     //  console.log("I am a promise and i am fulfilled")
+    //     //  console.log("I am a promise and i am rejected")
+
+    //     resolve(true)
+    //     // resolve(42)
+    //     // reject(new Error("i am an error"))
+    // },3000)
+    // })
+    // console.log(promise)
+    // let promise1=new Promise(function(resolve,reject){
+    //   console.log("promise is pending")
+    //     // resolve(41)  
+    //    setTimeout(function(){
+    //     //  console.log("I am a promise and i am fulfilled")
+    //     //  console.log("I am a promise and i am rejected")
+
+    //     //  resolve(true)
+    //     reject(new Error("i am an error"))
+    // },3000)
+    // })
+    // promise.then(function(value){
+    //     console.log(value)
+    // })
+    // promise1.catch(function(error){
+    //     console.log("this is error")
+    // })
+
+    // // console.log(promise1)
+
+
+    // 4.Atlaching Multiple Handlers//
+
+    let promise = new Promise((resolve, reject) => {
+        alert("I am not resolved")
+        setTimeout(() => {
+            resolve(5)
+        }, 3000)  
+    })
+    promise.then(()=>{
+        console.log("hurray")
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(5) 
+            },2000)
+        })
+    }).then((value)=>{
+        console.log(value)
+    })
+
+
+
+    
+    promise.then(() => {
+        console.log("congratulation this promise is now resolved")
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //1.// synchronous programming
+    // let a=alert=prompt("Waht is your name?")
+    // let b=alert=prompt("Waht is your age?")
+    // let c=alert=prompt("Waht is your favorite color?")
+    // console.log(a+" is " + b +" years old and has "+c+" favorite color ")
+    //2.//asynchronous programming//
+    // console.log("hi")
+    // let num = 1
+    // let b = setInterval(function () {
+    //     // console.log("hello")
+    //     num++
+    //     if (num == 5) {
+    //         // console.log("hello")
+    //         stop()
+    //     }
+    // }, 3000)
+    // console.log(b)
+    // let stop = () => {
+    //     clearInterval(b)
+    // }
+    // console.log("End")
+
+    // let c = setInterval(function(){
+    //     console.log(c)
+    // },2000)
+
+    // 3.callback //
+    // function loadScript(src,callback){
+    //  let script=document.createElement("script")
+    //  script.src=src
+    //  script.onload=function(){
+    //      console.log(" Loaded scrtipt with src "+src)
+    //      callback(src)
+    //   }
+
+    //  document.body.appendChild(script)
+    // }
+    // function hello( src){
+    //     alert("hello world " +src)
+    // }
+    // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",hello)
+
+
+    //4.//Promise//
+
+    // let promise=new Promise(function(resolve,reject){
+    //     resolve({data:"piyali"})
+    //     // reject()
+    // })
+    // console.log(promise)
+    // 5.then & catch//
+
+    // let p=new Promise((resolve,reject)=>{
+    //     console.log("promise is pending")
+    //     setTimeout(()=>{
+    //         // console.log("i am a promise and i am fulfilled")
+    //         resolve(true)
+
+    //     },5000)
+    // })
+    // console.log(p)
+
+    // let p1=new Promise((resolve,reject)=>{
+    //     console.log("promise is pending")
+    //     setTimeout(()=>{
+    //         console.log("i am a promise and i am rejected")
+
+    //         reject(new Error ("i am error"))
+    //     },5000)
+    // })
+    // console.log(p1)
+    // // to get the value
+    // p.then((value)=>{
+    //     console.log(value)
+    // })
+    // //to catch the value
+    // // p1.catch((error)=>{
+    // //     console.log("some error")
+    // // })
+    // p1.then((value)=>{
+    //     console.log(value)
+
+    //  }).catch((error)=>{
+    // console.log(error)
+    // })
+
+    //5.chaining .then()//
+    // let p1 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         console.log("Resolved after 2 seconds")
+    //         resolve({ data: "piyali" })
+    //     }, 2000)
+    // })
+    // p1.then((value) => {
+    //     console.log(value)
+    //     return value.data
+    // }).then((value1) => {
+    //     console.log(value1)
+    //     return value1.length
+    // }).then((value2)=>{
+    //     console.log(value2)
+    // })
+    // console.log(p1)
+
+
+    // let p=new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         console.log("i am a promise and I am fulfilled")
+    //         resolve("true")
+
+    //     },5000)
+    // })
+    // console.log(p)
+    // let p1=new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         console.log("i am a promise and I am rejected")
+
+    //         reject(new Error("error"))
+    //     },5000)
+    // })
+    // console.log(p1)
+
+
+    // p.then((value)=>{
+    //     console.log(value)
+    //     return value.length
+    // }).then((e)=>{
+    //    console.log(e)
+    // })
+    // p1.catch((error)=>{
+    //      console.log("error catch")
+    //  })
+
+
+    // chaining .then()//
+
+    // let p = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         console.log("Resolved after 3sec")
+    //         resolve(25)
+    //     }, 3000)
+    // })
+    // console.log(p)
+    // p.then((value) => {
+    //     console.log(value)
+    //     return typeof value
+    // }).then((type) => {
+    //     console.log(type)
+    //     return type.length
+    // }).then((num) => {
+    //     console.log(num)
+    //     let p2 = new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve("Promise 2")
+    //             return p2
+
+    //         }, 3000)
+    //     }).then((value) => {
+    //         console.log(value)
+    //         return 5
+    //     }).then((e) => {
+    //         console.log(e)
+    //     })
+    // })
+
+
+    // let loadScript=(src)=>{
+    //     return new Promise((resolve,reject)=>{
+    //         let script=document.createElement("script")
+    //         script.src=src
+    //     // console.log(script)
+    //     document.body.appendChild(script)
+    //     script.onload=()=>{
+    //         // console.log("loaded...")
+    //         resolve(1)
+    //     }
+    //     script.onerror=()=>{
+    //         reject(0)
+    //     }
+    //     })
+    // }
+
+
+    // let p1=loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
+    // p1.then((value)=>{
+    //  console.log(value)
+    // return loadScript ("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
+
+    // }).then((value)=>{
+    //     console.log("sec script")
+    // }).catch((error)=>{
+    //     console.log("we are sorry")
+    // })
+
+
+
+
+
+
+
+
+</script>
+
+</html>

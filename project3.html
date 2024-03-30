@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            text-align: right;
+            /* height: 100px;  */
+            /* margin: 10px;  */
+            padding: 20px 20px;
+        }
+
+        .color {
+            border-radius: 50%;
+            border: 2px solid gray;
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+
+
+        }
+
+        #white {
+            background-color: white;
+
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #pink {
+            background-color: pink;
+
+        }
+
+        #black {
+            background-color: black;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 60%;
+            height: 40vh;
+
+        }
+
+        .text p {
+            font-size: 2rem;
+            text-align: justify;
+            margin: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test">
+        <div class="box">
+            <span class="color" id="white" onclick="colorChange()"></span>
+            <span class="color" id="yellow" onclick="colorChange()"></span>
+            <span class="color" id="pink" onclick="colorChange()"></span>
+            <span class="color" id="black" onclick="colorChange()"></span>
+        </div>
+        <div class="text">
+            <img src="./images/rajasthan.jpg" alt="error">
+            <p id="contant">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis officiis odio
+                at voluptatibus,
+                recusandae ducimus voluptatem laudantium vero quae sint excepturi, quod fugit a obcaecati eligendi eius
+                voluptate facere amet totam repudiandae, modi dolorem. Nemo, explicabo aut quas nisi veritatis vero,
+                voluptatibus eaque libero maxime quasi sit voluptate itaque accusamus maiores possimus doloremque quis
+                incidunt!
+                Quibusdam soluta, harum ipsum libero saepe possimus iusto, et assumenda cupiditate maxime quasi vel
+                facilis quis
+                tempore debitis, deleniti veniam vitae velit iure sit delectus! Nam doloremque consequatur nisi
+                perspiciatis
+                maxime eum veritatis recusandae distinctio quas debitis, animi quidem, aliquam ipsum excepturi sapiente,
+                corporis aspernatur placeat modi ipsam tempora quia soluta. Atque, harum aut molestias et facere, animi,
+                libero
+                error illo voluptatibus reiciendis minima repellat similique dolorum! Tempora accusantium nisi iure
+                nostrum sunt
+                Eos, quidem? Excepturi reprehenderit maxime illo
+                architecto sit id iusto!
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    let backgroundColorChange = document.getElementById("test")
+    console.log(backgroundColorChange)
+
+    let colorName = document.getElementsByClassName("color")
+    console.log(colorName)
+    // let contant=document.getElementById("contant")
+    // console.log(contant)
+
+
+    let arr = Array.from(colorName)
+    console.log(arr)
+    arr.forEach(colorChange)
+
+
+
+
+    function colorChange(e) {
+        console.log(4)
+        backgroundColorChange.style.backgroundColor = "white"
+        backgroundColorChange.style.backgroundColor = "yellow"
+        backgroundColorChange.style.backgroundColor = "pink"
+        // backgroundColorChange.style.backgroundColor="black"
+    }
+
+
+
+
+
+
+    // function white(){
+    //   let white=document.getElementById("white")
+    //     console.log(white)
+    //     // yellow.style.backgroundColor="yellow"
+    //     backgroundColorChange.style.backgroundColor="white"
+    //     if(white){
+    //         contant.style.color="black"
+    //     }
+    // }
+    // function yellow(){
+    //   let yellow=document.getElementById("yellow")
+    //     console.log(yellow)
+    //     // yellow.style.backgroundColor="yellow"
+    //     backgroundColorChange.style.backgroundColor="yellow"
+    //     if(yellow){
+    //         contant.style.color="black"
+    //     }
+    // }
+    // function pink(){
+    //   let pink=document.getElementById("pink")
+    //     console.log(pink)
+    //     backgroundColorChange.style.backgroundColor="pink"
+    //     if(pink){
+    //         contant.style.color="black"
+    //     }
+    // }
+    // function black(){
+    //   let black =document.getElementById("black")
+    //     console.log(black)
+    //     backgroundColorChange.style.backgroundColor="black"
+    //     if(black){
+    //         contant.style.color="white"
+    //         console.log(2)
+    //     }
+
+    // }
+
+
+
+
+
+</script>
+
+</html>
