@@ -101,6 +101,7 @@
 <script>
     let backgroundColorChange = document.getElementById("test")
     // console.log(backgroundColorChange)
+    const themeColor = ["white","yellow","pink","black"]
 
     let colorName = document.getElementsByClassName("color")
     // console.log(colorName)
@@ -115,16 +116,18 @@
 
 
 
-    function colorChange(e) {
+    function colorChange(e,i) {
         // console.log(e)
         // backgroundColorChange.style.backgroundColor = "white"
         // backgroundColorChange.style.backgroundColor = "yellow"
         // backgroundColorChange.style.backgroundColor = "pink"
         // backgroundColorChange.style.backgroundColor = "black"
-        console.log(e.getAttribute("id"))
+        // console.log(e.getAttribute("id"))
         e.addEventListener("click", (e) => {
             const getId = e.target.getAttribute("id")
-            backgroundColorChange.style.backgroundColor = getId
+            console.log(i)
+            // backgroundColorChange.style.backgroundColor = getId
+            backgroundColorChange.style.backgroundColor = themeColor[i]
             if (getId === "black") {
                 contant.style.color = "white"
             } else {
