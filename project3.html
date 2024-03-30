@@ -70,10 +70,10 @@
 <body>
     <div id="test">
         <div class="box">
-            <span class="color" id="white" onclick="colorChange()"></span>
-            <span class="color" id="yellow" onclick="colorChange()"></span>
-            <span class="color" id="pink" onclick="colorChange()"></span>
-            <span class="color" id="black" onclick="colorChange()"></span>
+            <span class="color" id="white"></span>
+            <span class="color" id="yellow"></span>
+            <span class="color" id="pink"></span>
+            <span class="color" id="black"></span>
         </div>
         <div class="text">
             <img src="./images/rajasthan.jpg" alt="error">
@@ -100,27 +100,37 @@
 </body>
 <script>
     let backgroundColorChange = document.getElementById("test")
-    console.log(backgroundColorChange)
+    // console.log(backgroundColorChange)
 
     let colorName = document.getElementsByClassName("color")
-    console.log(colorName)
-    // let contant=document.getElementById("contant")
+    // console.log(colorName)
+    let contant = document.getElementById("contant")
     // console.log(contant)
 
 
     let arr = Array.from(colorName)
-    console.log(arr)
+    // console.log(arr)
     arr.forEach(colorChange)
 
 
 
 
     function colorChange(e) {
-        console.log(4)
-        backgroundColorChange.style.backgroundColor = "white"
-        backgroundColorChange.style.backgroundColor = "yellow"
-        backgroundColorChange.style.backgroundColor = "pink"
-        // backgroundColorChange.style.backgroundColor="black"
+        // console.log(e)
+        // backgroundColorChange.style.backgroundColor = "white"
+        // backgroundColorChange.style.backgroundColor = "yellow"
+        // backgroundColorChange.style.backgroundColor = "pink"
+        // backgroundColorChange.style.backgroundColor = "black"
+        console.log(e.getAttribute("id"))
+        e.addEventListener("click", (e) => {
+            const getId = e.target.getAttribute("id")
+            backgroundColorChange.style.backgroundColor = getId
+            if (getId === "black") {
+                contant.style.color = "white"
+            } else {
+                contant.style.color = "black"
+            }
+        })
     }
 
 
