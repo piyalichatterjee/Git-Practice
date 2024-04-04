@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 50vh;
+        margin: 5rem;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        border: 2px solid red;
+        width: 80%;
+        /* background-color: aquamarine; */
+    }
+
+    .container {
+        background-color: rgb(210, 231, 21);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .box {
+        /* margin: 4rem; */
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .zero {
+        font-size: 6rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        border: none;
+        padding: 0.5rem 2rem;
+        color: aliceblue;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        margin: 1rem;
+        cursor: pointer;
+    }
+
+    #start {
+        background-color: red;
+
+    }
+
+    #stop {
+        background-color: rgb(11, 173, 181);
+
+    }
+
+    #restart {
+        background-color: rgb(8, 0, 255);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        <div class="box">
+            <span class="zero" id="hr">00</span>
+            <h2>hr</h2>
+            <span class="zero" id="min">00</span>
+            <h2>min</h2>
+            <span class="zero" id="sec">00</span>
+            <h2>sec</h2>
+            <span class="zero" id="count">00</span>
+        </div>
+        <div>
+            <button class="btn" id="start" onclick="start()" >Start</button>
+            <button class="btn" id="stop" onclick="stop()" >Stop</button>
+            <button class="btn" id="restart" onclick="restart()">restart</button>
+        </div>
+    </div>
+</body>
+<script>
+
+let hr=0
+let min=0
+let sec=0
+let count=0
+
+
+let timer=false
+
+
+function start(){
+    timer=true
+    countDown()
+    
+}
+function stop(){
+    timer=false
+
+}
+function restart(){
+    timer=false
+
+hr=0
+min=0
+sec=0
+count=0
+document.getElementById("count").textContent="00"
+document.getElementById("sec").textContent="00"
+document.getElementById("min").textContent="00"
+document.getElementById("hr").textContent="00"
+
+}
+
+function countDown(){
+  if(timer==true){
+    count=count +1
+    if(count==100){
+        sec=sec+1
+        count=0
+        // console.log(sec)
+    }
+    if(sec==60){
+        min=min+1
+        sec=0
+        // console.log(min)
+    }
+    if(min==60){
+        hr=hr+1
+        sec=0
+        min=0
+    }
+    let hrString=hr
+   let minString=min
+    let secString=sec
+  let countString=count
+if(hr<10){
+    hrString= "0" +hrString
+}
+if(min<10){
+    minString= "0" + minString
+    // console.log(minString)
+}
+ if(sec<10){
+    secString= "0" + secString
+    // console.log(secString)
+    }
+ if(count<10){
+        countString= "0" + countString
+    }
+
+  document.getElementById("hr").textContent=hrString
+  document.getElementById("min").textContent=minString
+  document.getElementById("sec").textContent=secString
+  document.getElementById("count").textContent=countString
+    setTimeout("countDown()",10)
+}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

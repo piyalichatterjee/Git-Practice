@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider {
+        position: relative;
+        display: none;
+
+    }
+
+    .slider .text {
+        font-size: 3rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.517);
+        color: aliceblue;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    i {
+        position: absolute;
+        top: 30%;
+        /* border: 2px solid red; */
+        color: rgb(11, 11, 11);
+        padding: 10px;
+        border-radius: 50%;
+        background-color: rgba(240, 248, 255, 0.808);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #next {
+        right: 0;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <img src="./mark-harpur-K2s_YE031CA-unsplash.jpg" alt="error">
+            <div class="text">Text 1</div>
+        </div>
+        <div class="slider">
+            <img src="./ales-krivec-4miBe6zg5r0-unsplash.jpg" alt="error">
+            <div class="text">Text 2</div>
+        </div>
+        <div class="slider">
+            <img src="./ken-cheung-KonWFWUaAuk-unsplash.jpg" alt="error">
+            <div class="text">Text 3</div>
+        </div>
+        <i class="fa-solid fa-arrow-left" id="previous" onclick="pass(-1)"></i>
+        <i class="fa-solid fa-arrow-right" id="next" onclick="pass(1)"></i>
+    </div>
+</body>
+<script>
+    let flag = 0
+
+    function pass(x) {
+        flag = flag + x
+        // console.log(flag)
+        slideShow(flag)
+    }
+
+
+
+
+    slideShow(flag)
+
+    function slideShow(num) {
+        let slider = document.getElementsByClassName("slider")
+        // console.log(slider)
+
+        if (num == slider.length) {
+            flag = 0
+            num = 0
+            // console.log(flag)
+        }
+        if (num < 0) {
+            flag = slider.length - 1
+            num = slider.length - 1
+            console.log(flag)
+        }
+
+
+        for (let i of slider) {
+            i.style.display = "none"
+            // console.log(i)
+        }
+
+        slider[num].style.display = "block"
+
+
+    }
+</script>
+
+</html>

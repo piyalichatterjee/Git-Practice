@@ -82,54 +82,205 @@
 
     // 4.Atlaching Multiple Handlers//
 
-    let promise = new Promise((resolve, reject) => {
-        alert("I am not resolved")
-        setTimeout(() => {
-            resolve(5)
-        }, 3000)  
-    })
-    promise.then(()=>{
-        console.log("hurray")
-        return new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                resolve(5) 
-            },2000)
-        })
-    }).then((value)=>{
-        console.log(value)
-    })
+    // let promise = new Promise((resolve, reject) => {
+    //     alert("I am not resolved")
+    //     setTimeout(() => {
+    //         resolve(5)
+    //     }, 3000)  
+    // })
+    // promise.then(()=>{
+    //     console.log("hurray")
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(()=>{
+    //             resolve(5) 
+    //         },2000)
+    //     })
+    // }).then((value)=>{
+    //     console.log(value)
+    // })
 
 
 
     
-    promise.then(() => {
-        console.log("congratulation this promise is now resolved")
-    })
+    // promise.then(() => {
+    //     console.log("congratulation this promise is now resolved")
+    // })
+
+
+// 5.The Promise API//
+
+// let p1=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("value 1")
+//     },5000)
+// })
+// let p2=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         reject(new Error("Error"))
+//         // resolve("value 2")
+//     },8000)
+// })
+// let p3=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("value 3")
+//     },4000)
+// })
+// p1.then((value)=>{
+//  console.log(value)
+// })
+// p2.then((value)=>{
+//  console.log(value)
+// })
+// p3.then((value)=>{
+//  console.log(value)
+// })
+
+// // let promise_all=Promise.all([p1,p2,p3])
+// // let promise_all=Promise.allSettled([p1,p2,p3])
+// // let promise_all=Promise.race([p1,p2,p3])
+// let promise_all=Promise.any([p1,p2,p3])
+// promise_all.then((value)=>{
+//     console.log(value)
+// })
+   
+// video-59  async&await//
+
+// async function hello(){
+//     return 10
+// }
+// hello().then((e)=>{
+//        alert(e)
+//        console.log(e)
+// })
+
+
+// async function hello(){
+//     let delhiweather=new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("27 Deg")
+//         },2000)
+//     })
+//     // let bangalorweather=new Promise((resolve,reject)=>{
+//     //     setTimeout(()=>{
+//     //         resolve("22 Deg")
+//     //     },3000)
+//     // })
+//     // delhiweather.then((velue)=>{
+//     //       alert(value)
+//     //       console.log(value)
+//     // })
+// }
+
+// hello().then((v)=>{
+//       console.log(v)
+// })
 
 
 
+// async function hello(){
+//     let delhiweather=new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("27 Deg")
+        
+//         },3000)
+//     })
+//      let bangalorweather=new Promise((resolve,reject)=>{
+//          setTimeout(()=>{
+//              resolve("22 Deg")
+//      },10000)
+//      })
+// console.log("Fetching Delhi weather Please Wait")
+// let delhiW=await delhiweather
+// console.log("Fetching Delhi weather: " + delhiW)
+// console.log("Fetching Bangalor weather Please Wait")
+// let bangalorW=await bangalorweather
+// console.log("Fetching Bangalor weather: " + bangalorW)
+
+// // console.log(delhiW)
+// // console.log(bangalorW)
+// return [delhiW,bangalorW]
 
 
 
+//  delhiweather.then((value)=>{
+    //     alert(value)
+    //     console.log(value)
+        
+    //  })
+    //  bangalorweather.then((value)=>{
+    //     alert(value)
+    //     console.log(value)
+        
+    //  })
+// }
+// let hello2 = async()=>{
+//    console.log("hi! This is my program ")
+// }
+// let main1= async()=>{
+
+//     console.log("Welcome to weather contral room")
+//     let a= await  hello()
+//     let b= await hello2()
+//     // a.then((value)=>{
+//     //     console.log(value)
+//     // })
+//     // console.log(a)
+
+
+// }
+// main1()
 
 
 
+// let text=async()=>{
+// let data= await fetch("https://api.github.com/users/abhradippaul")
+// console.log(data)
+// let josnO=await data.json()
+// console.log(josnO)
+
+// }
+// text()
+
+//  async function text(){
+//     let data = await fetch("https://api.github.com/users/abhradippaul")
+//     console.log(data)
+//     let rec= await data.json()
+//     console.log(rec)
+// }
+// text()
 
 
+// Error Handling : try & catch//
+
+setTimeout(()=>{
+    console.log("Hacking wifi...Please wait...")
+},1000)
+
+try{
+ setTimeout(()=>{
+     try{
+     console.log(rahul)
+    }catch(error){
+          console.log(error)
+    }
+
+ },1000)
+    // console.log(rahul)
+}
+catch(error){
+console.log("this is a error"+error)
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+setTimeout(()=>{
+    console.log("Fetchimg username and password...Please wait...")
+},2000)
+setTimeout(()=>{
+    console.log("Hacking Rahul's facebook id ...Please wait...")
+},3000)
+setTimeout(()=>{
+    console.log("Username and password of Rahul (914568712)...Please wait...")
+},4000)
 
 
 
